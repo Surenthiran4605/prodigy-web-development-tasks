@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Simple Webpage</title>
+  <style>
+    :root{ --bg:#f4f7fb; --accent:#2b6cb0; --nav:#333 }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Arial, Helvetica, sans-serif;background:var(--bg);color:#db1515}
+
+    /* Navigation */
+    nav{display:flex;justify-content:center;gap:12px;background:var(--nav);padding:10px 0}
+    nav a{color:#fff;text-decoration:none;padding:8px 12px;border-radius:4px}
+    nav a:hover{background:rgba(5, 47, 231, 0.08)}
+
+    /* Full-screen hero */
+    .hero-full{height:100vh;width:100%;background-image:linear-gradient(rgba(0,0,0,0.28),rgba(0,0,0,0.12)),url('nature\ img.jpg');background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;position:relative}
+    .hero-content{text-align:center;color:#fff;padding:0 16px}
+    .hero-content h1{font-size:clamp(28px,4vw,48px);margin:0 0 8px}
+    .hero-content p{margin:0;font-size:18px;opacity:0.95}
+
+    main{padding:28px 16px;text-align:center}
+    .form-row{display:flex;justify-content:center;gap:8px;flex-wrap:wrap}
+    input[type="text"]{padding:10px 12px;border:1px solid #cbd5e1;border-radius:6px;width:260px}
+    button{padding:10px 16px;background:var(--accent);color:#021101;border:none;border-radius:6px;cursor:pointer;font-weight:600}
+
+    footer{padding:16px 0;text-align:center;color:#af06dd}
+    @media (max-width:480px){input[type="text"]{width:100%}}
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="hero-full" role="img" aria-label="Nature image">
+    <div class="hero-content">
+      <h1>Welcome to My Webpage</h1>
+      <p>This is a simple webpage created using HTML and CSS. The image covers the full screen.</p>
+    </div>
+  </div>
+
+  <main>
+    <form action="#" method="get">
+      <div class="form-row">
+        <label for="name" style="position:absolute;left:-9999px;">Name</label>
+        <input id="name" name="name" type="text" placeholder="Enter your name" required>
+        <button type="submit">Submit</button>
+      </div>
+    </form>
+  </main>
+
+  <footer>
+    <small>&copy; 2025 Simple Webpage</small>
+  </footer>
+
+</body>
+</html>
